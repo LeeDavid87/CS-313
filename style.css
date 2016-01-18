@@ -359,3 +359,12 @@ button:hover {
 	color: #C43C3E;
 }
 
+#comingsoon {
+  text-align: center;
+}
+
+#assignbody {
+  background-color:lightblue;
+  min-height: 1300px;
+  overflow:hidden;
+}
