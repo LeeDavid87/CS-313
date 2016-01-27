@@ -1,0 +1,154 @@
+﻿body {
+  margin: 0;
+  overflow:scroll;
+  background: #6394F8;
+}
+h2 {
+  border-bottom-style: solid;
+}
+table, pre{
+  margin-left: 20px;
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 6px;
+  font-size: 12;
+  border: 1px solid rgb(0, 90, 136);
+  border-radius: 4px;
+  width: 400px;
+}
+#formHolder {
+  padding-top: 55px;
+  width: 80%;
+  margin: auto;
+  background: white;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+div#navBar {
+  position: absolute;
+  width: inherit;
+  height: 55px;
+  -webkit-box-shadow: 0px 0px 8px 0px #000000;
+  -moz-box-shadow: 0px 0px 8px 0px #000000;
+  box-shadow: 0px 0px 8px 0px #000000;
+  background-color: black;
+  color: black;
+}
+#siteContainer {
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav .navbarleft {
+  float: left;
+}
+nav .navbarright {
+  float: right;
+}
+nav ul li {
+  display: inline;
+  padding-left: 1em;
+}
+nav ul li a {
+  color: #777777;
+  text-decoration: none;
+}
+div#navBar {
+  position: absolute;
+  width: inherit;
+  height: 55px;
+  -webkit-box-shadow: 0px 0px 8px 0px #000000;
+  -moz-box-shadow: 0px 0px 8px 0px #000000;
+  box-shadow: 0px 0px 8px 0px #000000;
+  background-color: black;
+  color: black;
+}
+div {
+  overflow: hidden;
+}
+.container {
+  margin: auto;
+  width: 80%;
+}
+.button {
+  background: #6394F8;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  font-size: 16px;
+  margin: 25px 0 15px 15px;
+  float: left;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 250px;
+  height: 20px;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #09c, #f44);
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  
+  border: none;
+  
+  width: 250px;
+  height: 20px;
+}
+progress[value]::-moz-progress-bar { 
+  background-image:
+    -moz-linear-gradient(
+      135deg, 
+      transparent 33%, 
+      rgba(0, 0, 0, 0.1) 33%, 
+      rgba(0, 0, 0, 0.1) 66%, 
+      transparent 66% 
+    ),
+    -moz-linear-gradient(
+      top, 
+      rgba(255, 255, 255, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ),
+    -moz-linear-gradient(
+      left, 
+      #09c, 
+      #f44
+    );
+
+  border-radius: 2px; 
+  background-size: 35px 20px, 100% 100%, 100% 100%; 
+}
+
+p[data-value] { 
+  
+  position: relative; 
+}
+
+p[data-value]:after {
+    content: attr(data-value) '%';
+    position: absolute; right:0;
+}
