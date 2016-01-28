@@ -17,7 +17,7 @@
       <nav>
         <div class="container">
           <ul class="navbarleft" id="navBarLink">
-            <li class="navlink"><a class="navlink" href="work.html">Home</a></li>
+            <li class="navlink"><a class="navlink" href="index.html">Home</a></li>
             <li class="navlink"><a class="navlink" href="#about">About</a></li>
           </ul>
         </div>
