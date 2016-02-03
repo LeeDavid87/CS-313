@@ -20,7 +20,12 @@
 			echo "</td></tr>";
 		}
 
-echo "</table>";
+    echo "</table>";
+	
+	foreach ($query as $row)
+	{
+		echo '<div>'. $row['book'] . ' ' . $row['chapter']. ' ' . $row['verse'] . ' ' . $row['content'] . '</div>';
+	}
     ?>
   </body>
 </html>
