@@ -6,7 +6,6 @@
   <body>
     <?php   
       $query =  mysql_query("SELECT * FROM scriptures");
-	  echo "<table><tr><td>First Name</td><td>Last Name</td></tr>";
 
 		while($row = mysql_fetch_array($query))
 		{
