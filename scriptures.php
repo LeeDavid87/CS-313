@@ -5,22 +5,7 @@
   </head>
   <body>
     <?php   
-      $query =  mysql_query("SELECT * FROM scriptures");
-	  echo "<table>";
-		while($row = mysql_fetch_array($query))
-		{
-			echo "<tr><td>";
-			echo $row['book'];
-			echo "</td><td>";
-			echo $row['chapter'];
-			echo "<tr><td>";
-			echo $row['verse'];
-			echo "<tr><td>";
-			echo $row['content'];
-			echo "</td></tr>";
-		}
-
-    echo "</table>";
+      $query =  $db->query("SELECT * FROM scriptures");
 	
 	foreach ($query as $row)
 	{
