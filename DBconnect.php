@@ -1,9 +1,9 @@
 <?php
 try
 {
-  $User = "adminbRsxs9S";
-  $Password = "D13liCk-KxN3";
-   $db = new PDO('mysql:host=127.13.131.2;dbname=polls_db', $user, $password);
+  $dbUser = "adminbRsxs9S";
+  $dbPassword = "D13liCk-KxN3";
+  $db = new PDO('mysql:host=127.13.131.2;dbname=polls_db', $dbUser, $dbPassword);
 }
 catch (PDOException $ex) 
 {
