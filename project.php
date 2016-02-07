@@ -8,13 +8,6 @@
 	$stud =  $db->query("SELECT * FROM stud");
 	?>
     <div id="stud">
-	  <?php 
-	  	  foreach ($stud as $row)
-		{
-			echo '<div> Name: '. $row['name'] . ' </br> ' . 
-			'Picture ' . $row['stud_picture'] .  '</div>';
-		}
-		?>
 	</div>
     <div id="queen">
 	</div>
