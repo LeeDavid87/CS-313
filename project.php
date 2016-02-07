@@ -1,7 +1,7 @@
 <? require ('DBconnect.php') ?>
 <? require ('header.php') ?>
   <? php 
-    $queen =  $db->query("SELECT * FROM queen");
+    $query =  $db->query("SELECT * FROM scriptures");
 	?>
   <div>
     <span></span>
