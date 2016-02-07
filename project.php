@@ -1,5 +1,8 @@
 <? require ('DBconnect.php') ?>
 <? require ('header.php') ?>
+  <? php 
+    $queen =  $db->query("SELECT * FROM queen");
+	?>
   <div>
     <span></span>
   </div>
