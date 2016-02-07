@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
-  <link href="styleSheet.css" type="text/css" rel="stylesheet" />
+  <link href="surveystyle.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
   <div id="siteContainer">
