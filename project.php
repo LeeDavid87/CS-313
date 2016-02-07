@@ -4,8 +4,8 @@
     <span></span>
   </div>
   <? php 
-    $queen =  $db->query("SELECT * FROM scriptures");
-	$stud =  $db->query("SELECT * FROM scriptures");
+    $queen =  $db->query("SELECT * FROM queen");
+	$stud =  $db->query("SELECT * FROM stud");
     <div id="stud">
 	  foreach ($stud as $row)
 		{
