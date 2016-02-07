@@ -3,10 +3,7 @@
   <div>
     <span></span>
   </div>
-  <? php 
-    $queen =  $db->query("SELECT * FROM queen");
-	$stud =  $db->query("SELECT * FROM stud");
-	?>
+
     <div id="stud">
 	</div>
     <div id="queen">
