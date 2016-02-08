@@ -21,7 +21,7 @@
 	  foreach ($queen as $row)
 		{
 			echo '<div> Name: '. $row['name'] . ' </br> ' . 
-			'Picture ' . '<img src="' . $row['queen_picture'] 
+			'Picture ' . '<img src="' . $row['queen_picture'] .
 			'"/>'.  '</div>';
 		}
 		?>
