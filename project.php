@@ -23,8 +23,7 @@
 		{
 			$id = $row['queen_id'];
 			echo '<div> Name: '. $row['name'] . $row['queen_id'] .' </br> ' . 
-			'Picture ' . '<img src=get.php?id=$id></div>' . 
-			'Picture ' . '<img src=get.php?id=1></div>' ;
+			'Picture ' . '<img src=get.php?id=$id></div>';
 		}
 		?>
 	</div>
