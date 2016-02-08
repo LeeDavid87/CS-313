@@ -1,7 +1,10 @@
 <? require ('DBconnect.php') ?>
 <? require ('header.php') ?>
   <div>
-    <span></span>
+    <span>Leo does not currently have a photo uploaded, it is not just a broken link.</span>
+	<span>Kitten pictures are comming soon, once they are sorted out.</span>
+	<span>Rest of the sections are designed, just not uploaded.</span>
+	<span>pulled photos from database.</span>
   </div>
   <?php 
     $queen =  $db->query("SELECT * FROM queen");
@@ -21,7 +24,7 @@
 	<?php
 	  foreach ($queen as $row)
 		{
-			echo '<div> Name: '. $row['name'] . $row['queen_id'] .' </br> ' . 
+			echo '<div> Name: '. $row['name'] . ' </br> ' . 
 			'Picture ' . '<img src=get.php?id=' . $row['queen_id'] . '></div>';
 		}
 		?>
