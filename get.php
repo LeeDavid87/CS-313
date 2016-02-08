@@ -1,7 +1,7 @@
 <? require ('DBconnect.php') ?>
 
 <?php 
-  $id = $_REQUEST('id');
+  $id = $_REQUEST['id'];
   $image =  $db->query("SELECT * FROM queen WHERE id=$id");
   $image = $image['queen_picture'];
   
