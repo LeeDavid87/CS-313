@@ -12,7 +12,8 @@
 	  foreach ($stud as $row)
 		{
 			echo '<div> Name: '. $row['name'] . ' </br> ' . 
-			'Picture ' . $row['stud_picture'] .  '</div>';
+			'Picture ' . '<img src="' . $row['stud_picture'] .
+			'"/>'.  '</div>';
 		}
 		?>
 	</div>
