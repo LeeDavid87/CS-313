@@ -22,10 +22,7 @@
 	  foreach ($queen as $row)
 		{
 			echo '<div> Name: '. $row['name'] . ' </br> ' . 
-			'Picture ' . '<img src="' . $row['queen_picture'] .
-			'"/>'. $row['queen_picture'] . '</div>';
-			header("Content-type: image/jpeg");
-            echo mysql_result($row['queen_picture'], 0);
+			'Picture ' . '<img src=get.php?id=' . $row['id'] . '></div>';
 		}
 		?>
 	</div>
