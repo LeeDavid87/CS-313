@@ -23,7 +23,7 @@
 		{
 			echo '<div> Name: '. $row['name'] . ' </br> ' . 
 			'Picture ' . '<img src="' . $row['queen_picture'] .
-			'"/>'.  '</div>';
+			'"/>'. $row['queen_picture'] . '</div>';
 		}
 		?>
 	</div>
