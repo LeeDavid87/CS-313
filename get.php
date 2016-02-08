@@ -3,7 +3,7 @@
 <?php 
   $id = $_REQUEST('id');
   $image =  $db->query("SELECT * FROM queen WHERE id=$id");
-  $image = image['quest_picture'];
+  $image = image['queen_picture'];
   
   header("Content-type: image/jpeg");
   

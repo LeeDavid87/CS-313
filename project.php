@@ -21,8 +21,8 @@
 	<?php
 	  foreach ($queen as $row)
 		{
-			echo '<div> Name: '. $row['name'] . $row['id'] .' </br> ' . 
-			'Picture ' . '<img src=get.php?id=' . $row['id'] . '"></div>';
+			echo '<div> Name: '. $row['name'] . $row['queen_id'] .' </br> ' . 
+			'Picture ' . '<img src=get.php?id=' . $row['queen_id'] . '"></div>';
 		}
 		?>
 	</div>
