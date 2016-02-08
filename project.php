@@ -1,10 +1,10 @@
 <? require ('DBconnect.php') ?>
 <? require ('header.php') ?>
   <div>
-    <span>Leo does not currently have a photo uploaded, it is not just a broken link.</span>
-	<span>Kitten pictures are comming soon, once they are sorted out.</span>
-	<span>Rest of the sections are designed, just not uploaded.</span>
-	<span>pulled photos from database.</span>
+    <span>Leo does not currently have a photo uploaded, it is not just a broken link.</span></br>
+	<span>Kitten pictures are comming soon, once they are sorted out.</span></br>
+	<span>Rest of the sections are designed, just not uploaded.</span></br>
+	<span>pulled photos from database.</span></br>
   </div>
   <?php 
     $queen =  $db->query("SELECT * FROM queen");
