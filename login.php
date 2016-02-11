@@ -23,30 +23,18 @@ if (isset($_POST['login'])) {
 }
 ?>
 <?php echo message(); ?>
+  <div id="formHolder">
 
 
-      <div id="formHolder">
-        <div >
-            <div >
-                <h3 >Log In</h3>
+    <form id="userLogin" action="login.php" method="post" >                   
+      <label>Username:</label>
+      <input  type="text" name="user" required="required" value="<?php echo htmlentities($username) ?>"/>
 
-                <form id="userLogin" action="login.php" method="post" >
-                    
-                        <p>
-                            <label>Username:</label>
-                            <input  type="text" name="user" required="required" value="<?php echo htmlentities($username) ?>"/>
-                        </p>
-                        <p>
-                            <label>Password</label>
-                            <input  type="password" name="pass" required="required"/>
-                        </p>
-                    
-
-                    <p><input  name="login" type="submit" value="Log In" form="userLogin"/> </p><br>
-                </form>
-            </div>
-        </div>
-    </div>
+      <label>Password</label>
+      <input  type="password" name="pass" required="required"/>                  
+      <input  name="login" type="submit" value="Log In" form="userLogin"/><br>
+    </form>
+  </div>
 
 
 
