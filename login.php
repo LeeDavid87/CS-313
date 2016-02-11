@@ -1,7 +1,6 @@
 <?php include 'includes/session.php'; ?>
 <? require 'includes/functions.php'; ?>
 <? require ('includes/DBconnect.php') ?>
-<? require ('includes/header.php') ?>
 <?php 
 $username = '';
 if (isset($_POST['login'])) {
@@ -23,7 +22,7 @@ if (isset($_POST['login'])) {
 }
 ?>
 <?php echo message(); ?>
-
+<? require ('includes/header.php') ?>
 
     <form id="userLogin" action="login.php" method="post" >                   
       <label>Username:</label>
