@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Survey</title>
-  <link href="surveystyle.css" rel="stylesheet" type="text/css" />
+  <link href="css/surveystyle.css" rel="stylesheet" type="text/css" />
   <script src="week07.js" type="text/javascript"></script>
   <style type="text/css"></style>
 </head>

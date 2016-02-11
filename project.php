@@ -1,5 +1,5 @@
-<? require ('DBconnect.php') ?>
-<? require ('header.php') ?>
+<? require ('includes/DBconnect.php') ?>
+<? require ('includes/header.php') ?>
   <div>
     <span>Leo does not currently have a photo uploaded, it is not just a broken link.</span></br>
 	<span>Kitten pictures are comming soon, once they are sorted out.</span></br>

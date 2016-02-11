@@ -29,7 +29,7 @@
 <head>
   <meta charset="utf-8" />
   <title>CS - 313 Assignments</title>
-  <link href="surveystyle.css" rel="stylesheet" type="text/css" />
+  <link href="css/surveystyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <div id="siteContainer">

@@ -1,4 +1,4 @@
-<? require ('DBconnect.php') ?>
+<? require ('includes/DBconnect.php') ?>
 <html>
   <head>
     <title>Week 05 : Team Activity</title>
