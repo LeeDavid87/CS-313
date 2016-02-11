@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
 <?php echo message(); ?>
 
 
-    <div >
+      <div id="formHolder">
         <div >
             <div >
                 <h3 >Log In</h3>
