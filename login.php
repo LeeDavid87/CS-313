@@ -22,15 +22,10 @@ if (isset($_POST['login'])) {
     
 }
 ?>
-
-<?php $title = 'Login'; ?>
-<?php include 'includes/header.php'; ?>
-
 <?php echo message(); ?>
 
-<main >
+
     <div >
-        <div >&nbsp;</div>
         <div >
             <div >
                 <h3 >Log In</h3>
@@ -53,6 +48,6 @@ if (isset($_POST['login'])) {
         </div>
     </div>
 
-</main>
+
 
 <? require 'includes/footer.php'; ?>
