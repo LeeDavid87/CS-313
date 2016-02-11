@@ -38,4 +38,4 @@
     <div id="litter">
 
 	</div>
-<? require ('footer.php') ?>
+<? require ('includes/footer.php') ?>
