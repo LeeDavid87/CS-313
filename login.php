@@ -1,6 +1,7 @@
 <?php include 'includes/session.php'; ?>
-<?php require 'includes/functions.php'; ?>
-<?php require 'includes/dbConnect.php'; ?>
+<? require 'includes/functions.php'; ?>
+<? require ('includes/DBconnect.php') ?>
+<? require ('includes/header.php') ?>
 <?php 
 $username = '';
 if (isset($_POST['login'])) {
@@ -54,4 +55,4 @@ if (isset($_POST['login'])) {
 
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<? require 'includes/footer.php'; ?>
