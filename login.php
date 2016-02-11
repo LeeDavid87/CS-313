@@ -23,7 +23,6 @@ if (isset($_POST['login'])) {
 }
 ?>
 <?php echo message(); ?>
-  <div id="formHolder">
 
 
     <form id="userLogin" action="login.php" method="post" >                   
@@ -34,7 +33,6 @@ if (isset($_POST['login'])) {
       <input  type="password" name="pass" required="required"/>                  
       <input  name="login" type="submit" value="Log In" form="userLogin"/><br>
     </form>
-  </div>
 
 
 
