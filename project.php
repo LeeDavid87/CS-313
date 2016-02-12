@@ -1,7 +1,9 @@
 <? require ('includes/DBconnect.php') ?>
 <? require ('includes/header.php') ?>
   <div>
-    <span>Leo does not currently have a photo uploaded, it is not just a broken link.</span></br>
+  <span>Updates are being done on WAMPserver to avoid always having to do 'git push' updates</span></br>
+  <span>Updates coming soon!</span></br>
+  <span>Leo does not currently have a photo uploaded, it is not just a broken link.</span></br>
 	<span>Kitten pictures are comming soon, once they are sorted out.</span></br>
 	<span>Rest of the sections are designed, just not uploaded.</span></br>
 	<span>pulled photos from database.</span></br>

@@ -1,5 +1,6 @@
+<?php require ('includes/DBconnect.php') ?>
 <?php 
-
+/*
   mysql_connect("127.13.131.2","adminbRsxs9S","D13liCk-KxN3") or die(mysql_error());
   mysql_select_db("php") or die(mysql_error());
   $id = $_REQUEST['id'];
@@ -9,5 +10,12 @@
   
   header("Content-type: image/jpeg");
   
+  echo $image;
+  */
+  $id = $_REQUEST['id'];
+  $image = $db->query("SELECT * FROM queen WHERE queen_id=$id"); 
+  $image = $image->fetchAll(PDO::FETCH_ASSOC);  
+  $image = $image[0]['queen_picture'];
+  header("Content-type: image/jpeg");
   echo $image;
 ?>

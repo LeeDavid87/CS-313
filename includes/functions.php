@@ -7,7 +7,7 @@ function attempt_login($username, $password) {
 
     $find_user = find_user_by_username($username);
     $user = $find_user[0];
-    //echo '<br/><br/>$user: ' . $user;
+
     if (isset($user)) {
 
         if (password_check($password, $user['password'])) {
@@ -24,7 +24,6 @@ function attempt_login($username, $password) {
 }
 function password_check($password, $existing_pass) {
     if ($password === $existing_pass) {
-        //echo '<br/>password match';
         return true;
     } else {
         return false;
@@ -32,19 +31,12 @@ function password_check($password, $existing_pass) {
 }
 function find_user_by_username($username) {
     global $db;
-    //echo 'find_user_by_username '.$username.'<br/>';
     $safe_username = $db->quote($username);
-    //echo 'Safe_Username: '.$safe_username . '<br/>';
-    $query = "SELECT * ";
-    $query .= "FROM user ";
-    $query .= "WHERE username = {$safe_username} ";
-    $stmt = $db->prepare($query);
-    $stmt->execute();
-    $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    $result = $stmt->fetchAll();
+    $info = $db->query("SELECT * FROM members WHERE username = $safe_username ");
+	$info = $info->fetchAll(PDO::FETCH_ASSOC);
 
-    confirm_query($result);
-    return $result;
+    confirm_query($info);
+    return $info;
 }
 function confirm_query($result_set) {
     if (!$result_set) {
