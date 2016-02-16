@@ -24,6 +24,7 @@ function attempt_login($username, $password) {
 }
 function password_check($password, $existing_pass) {
     if ($password === $existing_pass) {
+
         return true;
     } else {
         return false;
@@ -31,7 +32,9 @@ function password_check($password, $existing_pass) {
 }
 function find_user_by_username($username) {
     global $db;
+
     $safe_username = $db->quote($username);
+
     $info = $db->query("SELECT * FROM members WHERE username = $safe_username ");
 	$info = $info->fetchAll(PDO::FETCH_ASSOC);
 
@@ -58,5 +61,22 @@ function confirm_logged_in() {
         redirect_to("login.php");
     } 
 }
-
+function check_time_stamp() {
+  if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+    // last request was more than 30 minutes ago
+    session_unset();     // unset $_SESSION variable for the run-time 
+    session_destroy();   // destroy session data in storage
+    redirect_to("login.php");
+}
+  $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
+}
+function set_time_stamp() {
+  if (!isset($_SESSION['CREATED'])) {
+    $_SESSION['CREATED'] = time();
+} else if (time() - $_SESSION['CREATED'] > 1800) {
+    // session started more than 30 minutes ago
+    session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
+    $_SESSION['CREATED'] = time();  // update creation time
+}
+}
 ?>

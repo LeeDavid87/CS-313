@@ -1,43 +1,54 @@
-<? require ('includes/DBconnect.php') ?>
-<? require ('includes/header.php') ?>
-  <div>
-  <span>Updates are being done on WAMPserver to avoid always having to do 'git push' updates</span></br>
-  <span>Updates coming soon!</span></br>
-  <span>Leo does not currently have a photo uploaded, it is not just a broken link.</span></br>
-	<span>Kitten pictures are comming soon, once they are sorted out.</span></br>
-	<span>Rest of the sections are designed, just not uploaded.</span></br>
-	<span>pulled photos from database.</span></br>
-  </div>
-  <?php 
-    $queen =  $db->query("SELECT * FROM queen");
-	$stud =  $db->query("SELECT * FROM stud");
-	?>
-    <div id="stud">
-	<?php
-	  foreach ($stud as $row)
-		{
-			echo '<div> Name: '. $row['name'] . ' </br> ' . 
-			'Picture ' . '<img src="' . $row['stud_picture'] .
-			'"/>'.  '</div>';
-		}
-		?>
-	</div>
-    <div id="queen">
-	<?php
-	  foreach ($queen as $row)
-		{
-			echo '<div> Name: '. $row['name'] . ' </br> ' . 
-			'Picture ' . '<img src=get.php?id=' . $row['queen_id'] . '></div>';
-		}
-		?>
-	</div>
-    <div id="kitten">
+<?php require ('includes/sessions.php') ?>
+<?php require ('includes/functions.php') ?>
+<?php require ('includes/DBconnect.php') ?>
+<?php confirm_logged_in(); ?>
+<?php check_time_stamp(); ?>
+<?php require ('includes/header.php') ?>
+<?php require ('includes/loadinfo.php') ?>
+<?php
+  if (isset($_POST['change'])) {
+    $file = $_FILES['image']['tmp_name'];
+    
+    if (strlen($file) == 0) { echo "File not selected"; }
+    else {
+      $image = addslashes(file_get_contents($file));
+      
+      $image_size = getimagesize($file);
+      
+      if ($image_size == FALSE) { echo "Invalid image"; }
+      else {
+        echo $image;
+      }
+      
+    }
+  }
+?>
+<div class="tabs">
+  <!-- Radio button and lable for Queen -->
+  <input onclick="custom_width(this)" type="radio" name="tabs" id="tab1">
+  <label for="tab1">
+      <i class="fa fa-html5"></i><span>Queens</span>
+  </label>
+  <!-- Radio button and lable for Stud -->
+  <input onclick="custom_width(this)" type="radio" name="tabs" id="tab2">
+  <label for="tab2">
+      <i class="fa fa-css3"></i><span>Studs</span>
+  </label>
+  <!-- Radio button and lable for Kittens -->
+  <input onclick="custom_width(this)" type="radio" name="tabs" id="tab3">
+  <label for="tab3">
+      <i class="fa fa-code"></i><span>Kittens</span>
+  </label>
+  <!-- Radio button and lable for Customers -->
+  <input onclick="custom_width(this)" type="radio" name="tabs" id="tab4">
+  <label for="tab4">
+      <i class="fa fa-code"></i><span>Customers</span>
+  </label>
 
-	</div>
-    <div id="customer">
+  <?php load_page("queen", "1"); ?>
+  <?php load_page("stud", "2"); ?>
+  <?php load_page("kitten", "3"); ?>
+  <?php load_page("customer", "4"); ?>
+  
 
-	</div>
-    <div id="litter">
-
-	</div>
 <? require ('includes/footer.php') ?>
