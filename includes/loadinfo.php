@@ -17,7 +17,7 @@ function load_page($name, $content) {
     echo '</br><form action="project.php" method="POST" enctype="multipart/form-data">';
     echo '<input class="button" type="file" name="image"/><input type="submit" class="button" ';
     echo 'value="Change" name="change"><input name="cat" type="hidden" value="' . $row['name'] . '"/>';
-    echo '<input name="type" type="hidden" value="' . $name . '"</form></div>';
+    echo '<input name="type" type="hidden" value="' . $name . '"/></form></div>';
   }echo '</div> <!-- End of '. $name . ' -->';
 }
 ?>

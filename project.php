@@ -8,7 +8,7 @@
 <?php
   if (isset($_POST['change'])) {
     $file = $_FILES['image']['tmp_name'];
-    
+    var_dump($file);
     if (strlen($file) == 0) { echo "File not selected"; }
     else {
       $image = addslashes(file_get_contents($file));
@@ -17,7 +17,7 @@
       
       if ($image_size == FALSE) { echo "Invalid image"; }
       else {
-        echo $image;
+        $db->exec('UPDATE ' . $_POST['type'] . ' SET ' . $_POST['type'] . '_picture= "'.$image.'" WHERE name = "' . $_POST['cat'] . '"');
       }
       
     }
