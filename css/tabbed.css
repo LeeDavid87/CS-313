@@ -117,3 +117,7 @@ label.sublabel:hover, .tabs [id^="tab"]:checked + label.sublabel {
 .info-content {
   float: left;
 }
+
+.info-div {
+  float: right;
+}
